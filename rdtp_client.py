@@ -9,38 +9,6 @@
 # todo: sending first two packets with icmp echo request
 # todo: get interface ip addrses with interface file descriptor
 
-'''
-80 bits of RDTP Request & Response Header Format (RDTP):
-
-    0                   1                   2                   3
-    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |  Request Type |    File ID(s) |              unused.!         |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |                          Start Byte                           |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |                            End Byte                           |
-   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-   |     Data ...
-   +-+-+-+-+-
-
-  Examples:             [Other fields are X (don't care).]
-
-   .Request Types: 
-     0 reserved
-     1 file list + X + X + X
-     2 file size + file id + X + X
-     3 file data + file id + start byte + end byte
-
- ..Response Types: 
-    0 reserved
-    1 success + total num of files + X + X + data: array of fd
-    2 success + file id + X + X + data: size of file (4bytes)
-    3 success + file id + start byte + end byte + data: payload
-  100 invalid request type
-  101 invalid file id
-  102 invalid start or end byte
-'''
 # To run this script, use the command line as follows:
 # python3 rudp.py server_IP1:5000 server_IP2:192.168.1.101:5001
 import socket, threading, sys, struct, datetime, hashlib, random, time
