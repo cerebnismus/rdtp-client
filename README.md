@@ -24,7 +24,7 @@ $ pip install -r requirements.txt
 
 #### Usage
 ```bash
-$ python3.11 rdtp_client.py 192.168.0.17:5000 192.168.0.17:5001
+$ python3.11 rdtp_client.py <server1_ip>:<server1_port> <server2_ip>:<server2_port>
 ```
 
 #### RDTP Protocol Specification
