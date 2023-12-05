@@ -13,6 +13,12 @@
 #### Description
 A simple [RDTP client](https://github.com/streaming-university/rdtp/FileListClient) that can request a file list, file size, and file data from a [RDTP Server](https://github.com/streaming-university/rdtp/FileListServer).
 
+nohow from this project:
+
+Checksum Handling:
+Kernel's Role: In most operating systems, the kernel handles network operations for the loopback interface. When a packet is sent to the loopback address (e.g., 127.0.0.1 in IPv4), the kernel recognizes this and may set the checksum to zero as a part of its internal processing routines.
+NIC's Role: Since the loopback interface is not a physical device, the NIC (Network Interface Card) is not involved in the process. All operations are handled internally by the operating system.
+
 #### Requirements
 - Python 3.11.4
 

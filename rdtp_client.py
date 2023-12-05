@@ -2,8 +2,7 @@
 
 # Global variables are used to simplify the code and make it easier to understand
 
-# ! when sending a packet to loopback interface:
-# ! the packet's checksum is set to 0x0000 (0) by the kernel! why?
+
 
 # To run this script, use the command line as follows:
 # python3 rudp.py server_IP1:5000 server_IP2:192.168.1.101:5001
