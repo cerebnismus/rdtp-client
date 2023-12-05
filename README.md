@@ -1,5 +1,15 @@
 ### rdtp-client
 
+#### TODO List (in order of priority)
+- [ ] getting interface ip addreses and ports dynamically
+- [ ] one thread can always look for incoming icmp error packets
+- [ ] sending first two packets with icmp echo request
+- [ ] Add logging
+- [X] Add support for multiple servers
+- [X] Add support for multiple clients
+- [X] Add support for multiple file chunks
+
+
 #### Description
 A simple [RDTP client](https://github.com/streaming-university/rdtp/FileListClient) that can request a file list, file size, and file data from a [RDTP Server](https://github.com/streaming-university/rdtp/FileListServer).
 

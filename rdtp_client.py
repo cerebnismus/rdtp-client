@@ -5,10 +5,6 @@
 # ! when sending a packet to loopback interface:
 # ! the packet's checksum is set to 0x0000 (0) by the kernel! why?
 
-# todo: one thread can always look for incoming icmp error packets
-# todo: sending first two packets with icmp echo request
-# todo: get interface ip addrses with interface file descriptor
-
 # To run this script, use the command line as follows:
 # python3 rudp.py server_IP1:5000 server_IP2:192.168.1.101:5001
 import socket, threading, sys, struct, datetime, hashlib, random, time
